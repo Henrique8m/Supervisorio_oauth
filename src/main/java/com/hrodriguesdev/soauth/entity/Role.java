@@ -1,18 +1,14 @@
 package com.hrodriguesdev.soauth.entity;
 
 import java.io.Serializable;
-import java.util.HashSet;
-import java.util.Set;
 
 public class Role implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 	private Long id;
 	private String rolename;
-	private Set<User> user = new HashSet<>();	
 	
-	public Role(Long id, String roleName) {
-		this.id = id;
+	public Role(String roleName) {
 		this.rolename = roleName;
 	}
 	
@@ -53,12 +49,4 @@ public class Role implements Serializable{
 		return true;
 	}
 
-	public Set<User> getUser() {
-		return user;
-	}
-
-	public void setUser(Set<User> user) {
-		this.user = user;
-	}
-	
 }
